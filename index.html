@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>brosona.frfr</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Gravitas+One&family=Libre+Barcode+39+Extended&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .bbh-bartle-regular {
+      font-family: "BBH Bartle", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .gravitas-one-regular {
+      font-family: "Gravitas One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding-bottom: 120px;
+    }
+
+    #titletext {
+      font-family: "BBH Bartle", sans-serif;
+      font-size: 2.75rem;
+    }
+
+    #title {
+      margin-top: 9.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .waves {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 15vh;
+      min-height: 100px;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    .parallax>use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
+
+    #content {
+      margin-top: 45px;
+      background-color: #E7E9EB;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
+      padding: 25px;
+    }
+
+    .libre-barcode-39-extended-regular {
+      font-family: "Libre Barcode 39 Extended", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .linktray {
+      margin-top: 45px;
+      background-color: #E7E9EB;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
+      padding: 25px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .linktray a {
+      text-decoration: none;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .linktray a[href*="github"] {
+      color: #333;
+    }
+
+    .linktray a[href*="discord"] {
+      color: #5865F2;
+    }
+
+    .linktray a[href*="reddit"] {
+      color: #FF4500;
+    }
+
+    .linktray a:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="title">
+    <div id="titletext">B R O S O N A</div><br>
+    <h2>Kinda a work in progress. I dont have all too much freetime and lack of motivation etc.</h2>
+  </div>
+  <div class="linktray">
+    <a href="https://github.com/pixelkat5/brosona" target="_blank" rel="noopener">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://discord.gg/yrFGERRqCG" target="_blank" rel="noopener">
+      <i class="fa-brands fa-discord"></i>
+    </a>
+    <a href="https://www.reddit.com/r/Brosona/" target="_blank" rel="noopener">
+      <i class="fa-brands fa-reddit"></i>
+    </a>
+  </div>
+
+  <div id="content">
+    <h1>> What's this page ?</h1>
+    <h1 class="libre-barcode-39-extended-regular">Ch. One</h1>
+
+    <br>
+
+    <p>Well I kinda intended on this being a Brosona landing page or joke site. But idk.</p>
+    <p>It kinda started as a joke then I actually made a poll asking chat if I should actually buy the domain brosona.fr
+    </p>
+
+    <br>
+
+    <img scr="">
+  </div>
+
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+    preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+      <path id="wave-anim" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#wave-anim" x="48" y="0" fill="rgba(2, 158, 235, 0.7)" />
+      <use xlink:href="#wave-anim" x="48" y="3" fill="rgba(2, 158, 235, 0.5)" />
+      <use xlink:href="#wave-anim" x="48" y="5" fill="rgba(2, 158, 235, 0.2)" />
+      <use xlink:href="#wave-anim" x="48" y="7" fill="#029eeb" />
+    </g>
+  </svg>
+
+  <script>
+    const trailLength = 8;
+    const path = "https://afroken.neocities.org/GRAPHICS/FAVICONS/slowpoke.gif";
+    const storage = Array(trailLength * 2).fill(0);
+
+    window.addEventListener('DOMContentLoaded', () => {
+      for (let i = 0; i < trailLength; i++) {
+        const div = document.createElement('div');
+        div.id = `obj${i}`;
+        div.style.cssText = 'position:absolute;z-index:100';
+        div.innerHTML = `<img src="${path}">`;
+        document.body.appendChild(div);
+      }
+
+      function trail() {
+        for (let i = 0; i < trailLength; i++) {
+          const obj = document.getElementById(`obj${i}`);
+          obj.style.top = storage[i * 2] + 'px';
+          obj.style.left = storage[i * 2 + 1] + 'px';
+        }
+
+        for (let i = storage.length - 1; i >= 2; i--) {
+          storage[i] = storage[i - 2];
+        }
+
+        setTimeout(trail, 10);
+      }
+
+      document.onmousemove = (e) => {
+        storage[0] = e.pageY + 12;
+        storage[1] = e.pageX + 12;
+      };
+
+      trail();
+    });
+  </script>
+  <script>
+    (function () {
+      const ACTIVATION_CHANCE = 1 / 15;
+      const TRIGGER_CHANCE = 1 / 4;
+      const VOLUME = 0.5;
+
+      const images = [
+        '/assets/jpg/jummpies.png',
+        '/assets/jpg/utterdisbelief!!!.png',
+        '/assets/jpg/seduced.png',
+        '/assets/jpg/watchyobihah.jpg',
+        '/assets/jpg/whoome.jpg'
+      ];
+
+      let chaosMode = false;
+
+      function showFlashbang() {
+        const img = document.createElement('img');
+        img.src = images[Math.floor(Math.random() * images.length)];
+        img.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+          z-index: 999999;
+          pointer-events: none;
+          opacity: 1;
+          transition: opacity 2s ease-out;
+        `;
+
+        document.body.appendChild(img);
+
+        const audio = new Audio('/assets/mp3/vine.mp3');
+        audio.volume = VOLUME;
+        audio.play().catch(() => { });
+
+        setTimeout(() => {
+          img.style.opacity = '0';
+
+          const fadeStart = performance.now();
+          const fadeDuration = 2000;
+
+          function fadeAudio() {
+            const elapsed = performance.now() - fadeStart;
+            const progress = Math.min(elapsed / fadeDuration, 1);
+            audio.volume = VOLUME * (1 - progress);
+
+            if (progress < 1) {
+              requestAnimationFrame(fadeAudio);
+            } else {
+              audio.pause();
+            }
+          }
+
+          fadeAudio();
+          setTimeout(() => img.remove(), 2000);
+        }, 100);
+      }
+
+      document.addEventListener('click', () => {
+        if (!chaosMode) {
+          if (Math.random() < ACTIVATION_CHANCE) {
+            chaosMode = true;
+          }
+        } else {
+          if (Math.random() < TRIGGER_CHANCE) {
+            showFlashbang();
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
