@@ -1,0 +1,14 @@
+.container {
+  border: 2px solid black;
+  width: 950px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bouncing-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}

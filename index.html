@@ -145,6 +145,13 @@
     .linktray a:hover {
       opacity: 0.7;
     }
+
+    .fetus img {
+      width: 350%;
+      height: 350%;
+      image-rendering: pixelated;
+      display: inline-block;
+    }
   </style>
 </head>
 
@@ -171,10 +178,15 @@
     </a>
   </div>
 
-  <div style="margin-top: 45px; text-align: center;">
+  <div
+    style="margin-top: 45px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 20px;">
     <iframe width="314" height="321" scrolling="no"
       src="https://gifypet.neocities.org/pet/pet.html?name=Ozwomp&dob=1769306916&gender=m&element=Air&pet=ozwomp.gif&map=ozwomp.jpg&background=&tablecolor=black&textcolor=black"
       frameborder="0"></iframe>
+    <div class="fetus">
+      <a href="https://tamanotchi.world/29860c"><img src="https://tamanotchi.world/i2/29860"
+          alt="It's tamaNOTchi! Click to feed!"></a>
+    </div>
   </div>
 
   <div id="content">
@@ -189,7 +201,9 @@
 
     <br>
 
-    <img scr="">
+    <div class="container">
+      <div class="bouncing-text" id="text">Soul phrase owo</div>
+    </div>
   </div>
 
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
@@ -204,151 +218,9 @@
       <use xlink:href="#wave-anim" x="48" y="7" fill="#029eeb" />
     </g>
   </svg>
-
-  <script>
-    const trailLength = 8;
-    const path = "https://afroken.neocities.org/GRAPHICS/FAVICONS/slowpoke.gif";
-    const storage = Array(trailLength * 2).fill(0);
-
-    window.addEventListener('DOMContentLoaded', () => {
-      for (let i = 0; i < trailLength; i++) {
-        const div = document.createElement('div');
-        div.id = `obj${i}`;
-        div.style.cssText = 'position:absolute;z-index:100';
-        div.innerHTML = `<img src="${path}">`;
-        document.body.appendChild(div);
-      }
-
-      function trail() {
-        for (let i = 0; i < trailLength; i++) {
-          const obj = document.getElementById(`obj${i}`);
-          obj.style.top = storage[i * 2] + 'px';
-          obj.style.left = storage[i * 2 + 1] + 'px';
-        }
-
-        for (let i = storage.length - 1; i >= 2; i--) {
-          storage[i] = storage[i - 2];
-        }
-
-        setTimeout(trail, 10);
-      }
-
-      document.onmousemove = (e) => {
-        storage[0] = e.pageY + 12;
-        storage[1] = e.pageX + 12;
-      };
-
-      trail();
-    });
-  </script>
-  <script>
-    (function () {
-      const ACTIVATION_CHANCE = 1 / 15;
-      const TRIGGER_CHANCE = 1 / 5;
-      const VOLUME = 0.55;
-
-      const images = [
-        '/assets/jpg/jummpies.png',
-        '/assets/jpg/utterdisbelief!!!.png',
-        '/assets/jpg/seduced.png',
-        '/assets/jpg/watchyobihah.jpg',
-        '/assets/jpg/whoome.jpg',
-        '/assets/jpg/waltuh.png',
-        '/assets/jpg/eastern_poland.png',
-        '/assets/jpg/monkey.png',
-        '/assets/jpg/yippee.png',
-        '/assets/jpg/undress.png',
-        '/assets/jpg/hmmmm.png',
-        '/assets/jpg/jonkler.png',
-        '/assets/jpg/finland.png',
-        '/assets/jpg/belowaverage.png',
-        '/assets/jpg/SLAMMIN.png',
-        '/assets/jpg/watches.png',
-        '/assets/jpg/tehtoucher.png',
-        '/assets/jpg/FEEEDTHOU.png',
-        '/assets/jpg/yoh.png',
-        '/assets/jpg/COWWWWW.png',
-        '/assets/jpg/DUUUUUDE.png',
-        '/assets/jpg/howsoggie.png',
-        '/assets/jpg/bigsoggersomgomgomg.png',
-        '/assets/jpg/feels.png',
-        '/assets/jpg/repostowo.png',
-        '/assets/jpg/skdfkkdkdddddd-GEXXXX.png',
-        '/assets/jpg/hrt.png',
-        '/assets/jpg/morgoona.png',
-        '/assets/jpg/uhh.png',
-        '/assets/jpg/IMG_0426.webp',
-        '/assets/jpg/IMG_0435.jpg',
-        '/assets/jpg/IMG_0436.jpg',
-        '/assets/jpg/IMG_0437.jpg',
-        '/assets/jpg/IMG_0442.webp',
-        '/assets/jpg/IMG_0453.png',
-        '/assets/jpg/IMG_0455.webp',
-        '/assets/jpg/IMG_0456.webp',
-        '/assets/jpg/IMG_0457.webp',
-        '/assets/jpg/IMG_0462.webp'
-      ];
-
-      let chaosMode = false;
-
-      function showFlashbang() {
-        const img = document.createElement('img');
-        img.src = images[Math.floor(Math.random() * images.length)];
-        img.style.cssText = `
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          object-fit: fit;
-          z-index: 999999;
-          pointer-events: none;
-          opacity: 1;
-          transition: opacity 2s ease-out;
-        `;
-
-        document.body.appendChild(img);
-
-        const audio = new Audio('/assets/mp3/vine.mp3');
-        audio.volume = VOLUME;
-        audio.play().catch(() => { });
-
-        setTimeout(() => {
-          img.style.opacity = '0';
-
-          const fadeStart = performance.now();
-          const fadeDuration = 2000;
-
-          function fadeAudio() {
-            const elapsed = performance.now() - fadeStart;
-            const progress = Math.min(elapsed / fadeDuration, 1);
-            audio.volume = VOLUME * (1 - progress);
-
-            if (progress < 1) {
-              requestAnimationFrame(fadeAudio);
-            } else {
-              audio.pause();
-            }
-          }
-
-          fadeAudio();
-          setTimeout(() => img.remove(), 2000);
-        }, 100);
-      }
-
-      document.addEventListener('click', () => {
-        if (!chaosMode) {
-          if (Math.random() < ACTIVATION_CHANCE) {
-            chaosMode = true;
-          }
-        } else {
-          if (Math.random() < TRIGGER_CHANCE) {
-            showFlashbang();
-          }
-        }
-      });
-    })();
-  </script>
+  <script src="assets/IWANNASLAMMYHEADAGAINSTABRICKWALLOMGIHATEJAVASCRIPTSOMUCHUGHHH/vineboom.js"></script>
+  <script src="assets/IWANNASLAMMYHEADAGAINSTABRICKWALLOMGIHATEJAVASCRIPTSOMUCHUGHHH/trail.js"></script>
+  <script src="assets/IWANNASLAMMYHEADAGAINSTABRICKWALLOMGIHATEJAVASCRIPTSOMUCHUGHHH/bouncie.js"></script>
 </body>
 
 </html>
