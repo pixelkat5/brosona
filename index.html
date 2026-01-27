@@ -166,6 +166,21 @@
       image-rendering: pixelated;
       display: inline-block;
     }
+
+    .container {
+      border: 2px solid black;
+      width: 950px;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bouncing-text {
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
   </style>
 </head>
 
@@ -302,22 +317,24 @@
   </svg>
 
   <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      const textPath = document.getElementById('textPath');
-      let offset = 0;
-      const speed = 0.15;
+      (function () {
+        const textPath = document.getElementById('textPath');
+        if (!textPath) return;
 
-      function animate() {
-        offset -= speed;
-        if (offset < -100) {
-          offset = 0;
+        let offset = 0;
+        const speed = 0.15;
+
+        function animate() {
+          offset -= speed;
+          if (offset < -100) {
+            offset = 0;
+          }
+          textPath.setAttribute('startOffset', offset + '%');
+          requestAnimationFrame(animate);
         }
-        textPath.setAttribute('startOffset', offset + '%');
-        requestAnimationFrame(animate);
-      }
 
-      animate();
-    });
+        animate();
+      })();
   </script>
 
   <script src="assets/IWANNASLAMMYHEADAGAINSTABRICKWALLOMGIHATEJAVASCRIPTSOMUCHUGHHH/vineboom.js"></script>
