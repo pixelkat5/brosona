@@ -1,7 +1,7 @@
 (function() {
   const ACTIVATION_CHANCE = 1 / 15;
   const TRIGGER_CHANCE = 1 / 5;
-  const VOLUME = 0.55;
+  const VOLUME = 0.25;
 
   const images = [
     '/assets/jpg/jummpies.png',
