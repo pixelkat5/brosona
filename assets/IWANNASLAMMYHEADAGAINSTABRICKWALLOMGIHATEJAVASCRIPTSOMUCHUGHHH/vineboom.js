@@ -42,7 +42,8 @@
     '/assets/jpg/IMG_0455.webp',
     '/assets/jpg/IMG_0456.webp',
     '/assets/jpg/IMG_0457.webp',
-    '/assets/jpg/IMG_0462.webp'
+    '/assets/jpg/IMG_0462.webp',
+    '/assets/jpg/yiga.png'
   ];
 
   let chaosMode = false;
