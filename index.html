@@ -183,6 +183,47 @@
       font-weight: bold;
       white-space: nowrap;
     }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: scroll-left 65s linear infinite;
+    }
+
+    .marquee-track.reverse {
+      animation: scroll-right 65s linear infinite;
+    }
+
+    .marquee-track img {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes scroll-right {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
   </style>
 </head>
 
@@ -235,90 +276,93 @@
       <a href="https://tamanotchi.world/29860c" data-toggle="tooltip" title="Click to feed!!!"><img
           src="https://tamanotchi.world/i2/29860" alt="It's tamaNOTchi! Click to feed!"></a>
     </div>
-    <!-- FC2 Counter  Starts here -->
     <script language="javascript" type="text/javascript"
       src="//counter1.fc2.com/counter.php?id=40399416&main=1"></script><noscript><img
         src="//counter1.fc2.com/counter_img.php?id=40399416&main=1" /></noscript>
-    <!-- FC2 Counter  Ends here -->
   </div>
 
   <div id="content">
     <h1>> What's this page ?</h1>
     <h1 class="libre-barcode-39-extended-regular">Ch. One</h1>
 
-    <marquee behavior="scroll" direction="left">
-      <img src="assets/buttons/badge.gif" />
-      <img src="assets/buttons/gameboy.png" />
-      <img src="assets/buttons/misc-homebrew.png" />
-      <img src="assets/buttons/neocities-now.gif" />
-      <img src="assets/buttons/nintendo-wii.png" />
-      <img src="assets/buttons/steam.gif" />
-      <img src="assets/buttons/vlc.png" />
-      <img src="assets/buttons/w.gif" />
-      <img src="assets/buttons/bu12.gif" />
-      <a href="https://www.firefox.com/en-US/"><img src="assets/buttons/button102.gif" /></a>
-      <img src="assets/buttons/button201.gif" />
-      <img src="assets/buttons/button261.gif" />
-      <img src="assets/buttons/button305.png" />
-      <img src="assets/buttons/button352.png" />
-      <img src="assets/buttons/button337.png" />
-      <img src="assets/buttons/delete-twitter.gif" />
-      <a href="default.asp"><img src="assets/buttons/discord2.gif" /></a>
-      <img src="assets/buttons/fckgoogle.gif" />
-      <img src="assets/buttons/xp.gif" />
-      <img src="assets/buttons/a6.gif" />
-      <img src="assets/buttons/a7.gif" />
-      <img src="assets/buttons/a18.gif" />
-      <img src="assets/buttons/badge_nonbinary.gif" />
-      <img src="assets/buttons/bingus.gif" />
-      <img src="assets/buttons/capybaraNOW.png" />
-      <img src="assets/buttons/ilikecomputer.png" />
-      <img src="assets/buttons/melonland-badge-2.gif" />
-      <img src="assets/buttons/sega.gif" />
-      <img src="assets/buttons/transgengar.png" />
-      <a href="https://tamanotchi.world/29860c"><img src="assets/buttons/tamanotchi.gif" /></a>
-    </marquee>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="buttons-track">
+        <img src="assets/buttons/badge.gif" />
+        <img src="assets/buttons/gameboy.png" />
+        <img src="assets/buttons/misc-homebrew.png" />
+        <img src="assets/buttons/neocities-now.gif" />
+        <img src="assets/buttons/nintendo-wii.png" />
+        <img src="assets/buttons/steam.gif" />
+        <img src="assets/buttons/vlc.png" />
+        <img src="assets/buttons/w.gif" />
+        <img src="assets/buttons/bu12.gif" />
+        <a href="https://www.firefox.com/en-US/"><img src="assets/buttons/button102.gif" /></a>
+        <img src="assets/buttons/button201.gif" />
+        <img src="assets/buttons/button261.gif" />
+        <img src="assets/buttons/button305.png" />
+        <img src="assets/buttons/button352.png" />
+        <img src="assets/buttons/button337.png" />
+        <img src="assets/buttons/delete-twitter.gif" />
+        <a href="default.asp"><img src="assets/buttons/discord2.gif" /></a>
+        <img src="assets/buttons/fckgoogle.gif" />
+        <img src="assets/buttons/xp.gif" />
+        <img src="assets/buttons/a6.gif" />
+        <img src="assets/buttons/a7.gif" />
+        <img src="assets/buttons/a18.gif" />
+        <img src="assets/buttons/badge_nonbinary.gif" />
+        <img src="assets/buttons/bingus.gif" />
+        <img src="assets/buttons/capybaraNOW.png" />
+        <img src="assets/buttons/ilikecomputer.png" />
+        <img src="assets/buttons/melonland-badge-2.gif" />
+        <img src="assets/buttons/sega.gif" />
+        <img src="assets/buttons/transgengar.png" />
+        <a href="https://tamanotchi.world/29860c"><img src="assets/buttons/tamanotchi.gif" /></a>
+      </div>
+    </div>
 
-    <marquee behavior="scroll" direction="right">
-      <img src="assets/bros/ClotheslineJack.webp" data-toggle="tooltip" title="u/ClotheslineJack" />
-      <img src="assets/bros/Fragrant-Ferret-1146.webp" data-toggle="tooltip" title="u/Fragrant-Ferret-1146" />
-      <img src="assets/bros/Ok-Tear7712.webp" height=128 width=128 data-toggle="tooltip" title="
-        u/Ok-Tear7712 " />
-      <img src="assets/bros/Tetrotheocto.png" data-toggle="tooltip" title="u/Tetrotheocto" />
-      <img src="assets/bros/Under_Press.webp" data-toggle="tooltip" title="u/Under_Press" />
-      <img src="assets/bros/Yoskchee.webp" data-toggle="tooltip" title="u/Yoskchee" />
-      <img src="assets/bros/Zackou242.png" data-toggle="tooltip" title="u/Zackou242" />
-      <img src="assets/bros/nagisasuou.png" height=128 width=128 data-toggle="tooltip" title="u/nagisasuou" />
-      <img src="assets/bros/No-Mulberry6996.png" height=128 width=128 data-toggle="tooltip" title="u/No-Mulberry6996" />
-      <img src="assets/bros/chisekujinaka.png" height=128 width=128 data-toggle="tooltip" title="u/ChiseKujinaka" />
-      <img src="assets/bros/beanthedynamitefan.png" height=128 width=128 data-toggle="tooltip"
-        title="u/beanthedynamitefan" />
-      <img src="assets/bros/IMG_7277.png" height=128 width=128 data-toggle="tooltip" title="u/vp-data i think" />
-      <img src="assets/bros/Luigi041101.png" height=128 width=128 data-toggle="tooltip" title="u/Luigi041101" />
-      <img src="assets/bros/jiraiyayosuke.png" height=128 width=128 data-toggle="tooltip" title="u/JiraiyaYosuke" />
-      <img src="assets/bros/evening-initial3110.png" height=128 width=128 data-toggle="tooltip"
-        title="u/Evening-Initial3110" />
-      <img src="assets/bros/LeGamingProPlays.png" height=128 width=128 data-toggle="tooltip"
-        title="u/LeGamingProPlays" />
-      <img src="assets/bros/Oni.gif" height=128 width=128 data-toggle="tooltip" title="u/OniExpertise" />
-      <img src="assets/bros/Renraks_imresizer.jpg" height=128 width=128 data-toggle="tooltip" title="u/renraks0809" />
-      <a href="https://www.reddit.com/user/SapphicRedditAU/"><img src="assets/bros/SapphicRedditAU.png" height=128
-          width=128 data-toggle="tooltip" title="u/SapphicRedditAU" /></a>
-      <a href="https://www.reddit.com/user/Dictator-chan/"><img src="assets/bros/Dictator-chan.png" height=128 width=128
-          data-toggle="tooltip" title="u/Dictator-chan" /></a>
-      <a href="https://www.reddit.com/user/Triggiah/"><img src="assets/bros/Triggiah.png" height=128 width=128
-          data-toggle="tooltip" title="u/Triggiah" /></a>
-      <a href="https://www.reddit.com/user/a-fan-of-greendit/"><img src="assets/bros/a-fan-of-greendit.png" height=128
-          width=128 data-toggle="tooltip" title="u/a-fan-of-greendit" /></a>
-      <a href="https://www.reddit.com/user/teamskyfriend/"><img src="assets/bros/teamskyfriend.png" height=128 width=128
-          data-toggle="tooltip" title="u/teamskyfriend" /></a>
-      <a href="https://www.reddit.com/user/NicodamusTheRizzler/"><img src="assets/bros/NicodamusTheRizzler.png"
-          height=128 width=128 data-toggle="tooltip" title="u/NicodamusTheRizzler" /></a>
-      <a href="https://www.reddit.com/user/Same-Arm-8555/"><img src="assets/bros/Same-Arm-8555.png" height=128 width=128
-          data-toggle="tooltip" title="u/Same-Arm-8555" /></a>
-      <a href="https://www.youtube.com/watch?v=Da1WxQavwuc"><img src="assets/bros/yiga.png" height=128 width=128
-          data-toggle="tooltip" title="yiga" /></a>
-    </marquee>
+    <div class="marquee-wrapper">
+      <div class="marquee-track reverse" id="bros-track">
+        <img src="assets/bros/ClotheslineJack.webp" data-toggle="tooltip" title="u/ClotheslineJack" />
+        <img src="assets/bros/Fragrant-Ferret-1146.webp" data-toggle="tooltip" title="u/Fragrant-Ferret-1146" />
+        <img src="assets/bros/Ok-Tear7712.webp" height=128 width=128 data-toggle="tooltip" title="u/Ok-Tear7712" />
+        <img src="assets/bros/Tetrotheocto.png" data-toggle="tooltip" title="u/Tetrotheocto" />
+        <img src="assets/bros/Under_Press.webp" data-toggle="tooltip" title="u/Under_Press" />
+        <img src="assets/bros/Yoskchee.webp" data-toggle="tooltip" title="u/Yoskchee" />
+        <img src="assets/bros/Zackou242.png" data-toggle="tooltip" title="u/Zackou242" />
+        <img src="assets/bros/nagisasuou.png" height=128 width=128 data-toggle="tooltip" title="u/nagisasuou" />
+        <img src="assets/bros/No-Mulberry6996.png" height=128 width=128 data-toggle="tooltip"
+          title="u/No-Mulberry6996" />
+        <img src="assets/bros/chisekujinaka.png" height=128 width=128 data-toggle="tooltip" title="u/ChiseKujinaka" />
+        <img src="assets/bros/beanthedynamitefan.png" height=128 width=128 data-toggle="tooltip"
+          title="u/beanthedynamitefan" />
+        <img src="assets/bros/IMG_7277.png" height=128 width=128 data-toggle="tooltip" title="u/vp-data i think" />
+        <img src="assets/bros/Luigi041101.png" height=128 width=128 data-toggle="tooltip" title="u/Luigi041101" />
+        <img src="assets/bros/jiraiyayosuke.png" height=128 width=128 data-toggle="tooltip" title="u/JiraiyaYosuke" />
+        <img src="assets/bros/evening-initial3110.png" height=128 width=128 data-toggle="tooltip"
+          title="u/Evening-Initial3110" />
+        <img src="assets/bros/LeGamingProPlays.png" height=128 width=128 data-toggle="tooltip"
+          title="u/LeGamingProPlays" />
+        <img src="assets/bros/Oni.gif" height=128 width=128 data-toggle="tooltip" title="u/OniExpertise" />
+        <img src="assets/bros/Renraks_imresizer.jpg" height=128 width=128 data-toggle="tooltip" title="u/renraks0809" />
+        <a href="https://www.reddit.com/user/SapphicRedditAU/"><img src="assets/bros/SapphicRedditAU.png" height=128
+            width=128 data-toggle="tooltip" title="u/SapphicRedditAU" /></a>
+        <a href="https://www.reddit.com/user/Dictator-chan/"><img src="assets/bros/Dictator-chan.png" height=128
+            width=128 data-toggle="tooltip" title="u/Dictator-chan" /></a>
+        <a href="https://www.reddit.com/user/Triggiah/"><img src="assets/bros/Triggiah.png" height=128 width=128
+            data-toggle="tooltip" title="u/Triggiah" /></a>
+        <a href="https://www.reddit.com/user/a-fan-of-greendit/"><img src="assets/bros/a-fan-of-greendit.png" height=128
+            width=128 data-toggle="tooltip" title="u/a-fan-of-greendit" /></a>
+        <a href="https://www.reddit.com/user/teamskyfriend/"><img src="assets/bros/teamskyfriend.png" height=128
+            width=128 data-toggle="tooltip" title="u/teamskyfriend" /></a>
+        <a href="https://www.reddit.com/user/NicodamusTheRizzler/"><img src="assets/bros/NicodamusTheRizzler.png"
+            height=128 width=128 data-toggle="tooltip" title="u/NicodamusTheRizzler" /></a>
+        <a href="https://www.reddit.com/user/Same-Arm-8555/"><img src="assets/bros/Same-Arm-8555.png" height=128
+            width=128 data-toggle="tooltip" title="u/Same-Arm-8555" /></a>
+        <a href="https://www.youtube.com/watch?v=Da1WxQavwuc"><img src="assets/bros/yiga.png" height=128 width=128
+            data-toggle="tooltip" title="yiga" /></a>
+      </div>
+    </div>
+
     <p>Well I kinda intended on this being a Brosona landing page or joke site. But idk.</p>
     <p>It kinda started as a joke then I actually made a poll asking chat if I should actually buy the domain brosona.fr
     </p>
@@ -362,6 +406,16 @@
 
         animate();
       })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttonsTrack = document.getElementById('buttons-track');
+      const brosTrack = document.getElementById('bros-track');
+
+      buttonsTrack.innerHTML += buttonsTrack.innerHTML;
+      brosTrack.innerHTML += brosTrack.innerHTML;
+    });
   </script>
 
   <script src="assets/IWANNASLAMMYHEADAGAINSTABRICKWALLOMGIHATEJAVASCRIPTSOMUCHUGHHH/vineboom.js"></script>
